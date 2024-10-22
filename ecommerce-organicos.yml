@@ -1,0 +1,82 @@
+openapi: '3.0.0'
+
+info:
+  title: ECommerce Organicos - Alura
+  version: 1.0.0
+  contact:
+    email: israelfsouza@hotmail.com
+
+servers:
+  - url: organicofunctionapp20241022124133.azurewebsites.net/api/Carrinho
+
+
+tags:
+  - name: ECommerce API - Curso Azure Functions Alura
+
+paths:
+  /:
+    get:
+      operationId: ListarItensCarrinho
+      tags:
+        - ECommerce API - Curso Azure Functions Alura
+
+      responses:
+        200:
+          description: IP
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ItemCarrinhoSchema"
+
+
+components:
+  schemas:
+    ItemCarrinhoSchema:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Id do item
+
+        productId:
+          type: number
+          description: Id do Produto
+
+        description:
+          type: string
+          description: Descrição
+
+        unitPrice:
+          type: number
+          description: Preço Unitário
+
+        quantity:
+          type: number
+          description: Quantidade
+
+        total:
+          type: number
+          description: Valor Total
+
+        icon:
+          type: string
+          description: Emoji da Fruta
+
+        
+
+
+  
+
+
+
+        
+
+        
+
+        
+
+        
+        
+
