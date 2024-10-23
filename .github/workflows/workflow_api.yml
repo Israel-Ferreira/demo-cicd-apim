@@ -22,5 +22,5 @@ jobs:
             --specification-format OpenApi \
             --specification-path ecommerce-organicos.yml \
             --path /ecommerce-organicos-alura \
-            --api-revision  ${{ env.hash }}
+            --api-id ecommerce-organicos-api-alura
 
