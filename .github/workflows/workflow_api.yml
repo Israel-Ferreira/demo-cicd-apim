@@ -21,5 +21,6 @@ jobs:
             az apim api import -n ${{ secrets.APIM_INSTANCE }} -g ${{ secrets.APIM_RESOURCE_GROUP }} \
             --specification-format OpenApi \
             --specification-path ecommerce-organicos.yml \
-            --path /ecommerce-organicos-alura
+            --path /ecommerce-organicos-alura \
+            --api-revision  ${{ env.hash }}
 
