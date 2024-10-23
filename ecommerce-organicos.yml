@@ -7,7 +7,7 @@ info:
     email: israelfsouza@hotmail.com
 
 servers:
-  - url: organicofunctionapp20241022124133.azurewebsites.net/api/Carrinho
+  - url: https://organicofunctionapp20241022124133.azurewebsites.net/api/Carrinho
 
 
 tags:
@@ -30,6 +30,21 @@ paths:
                 items:
                   $ref: "#/components/schemas/ItemCarrinhoSchema"
 
+    post:
+      operationId: AdicionarItemNoCarrinho
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ItemCarrinhoSchema"
+
+      responses:
+        200:
+          description: Item adicionado no carrinho com sucesso
+
+        500:
+          description: Erro ao processar a requisição
+        
 
 components:
   schemas:
