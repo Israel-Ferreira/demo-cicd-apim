@@ -3,6 +3,10 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   create-and-update-api-endpoint:
     runs-on: ubuntu-latest
@@ -24,3 +28,4 @@ jobs:
             --specification-format OpenApi \
             --specification-path ecommerce-organicos.yml \
             --path /ecommerce-organicos-alura
+
